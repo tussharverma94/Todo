@@ -1,0 +1,36 @@
+.Content {
+/* Add shadows to create the "card" effect */
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+transition: 0.3s;
+}
+        
+/* On mouse-over, add a deeper shadow */
+.Content:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+padding: 2px 16px;
+}
+
+.ul {
+    /* list-style-type: none; Remove bullets */
+    padding-left: 60;
+    padding: 12; /* Remove padding */
+    margin: 12; /* Remove margins */
+    
+    }
+    
+.li {
+    text-align: left;
+    width: 50%;
+    border: 1px solid #ddd; /* Add a thin border to each list item */
+    margin-top: 3px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Add a grey background color */
+    padding: 12px; /* Add some padding */
+    }
+
+.li:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
