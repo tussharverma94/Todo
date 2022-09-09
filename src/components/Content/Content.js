@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import AddTodo from '../addTodo/addTodo';
 import Edit from '../Edit/Edit';
 import ShowTodo from '../showTodo/showTodo'
-import config from '../../../private';
+import config from '../../private';
 // import styles from './Content.module.css';
 
 const Content = () => {
