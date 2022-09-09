@@ -55,16 +55,16 @@ const Edit = (props) => {
     <div className={styles.AddTodo} /*onClick={checkVal}*/>
         <form onSubmit={event => {handleSubmit(event,props.EditTask)} }>
           <div>
-            <label> Heading </label>
-              <input type="text" onChange={e => checkHeading(e)}></input>
+            <label > Heading </label>
+              <input type="text" className='form-control' onChange={e => checkHeading(e)}></input>
           </div>
           <span className='text-danger'>{headerror.error}</span>
 
           <br />
 
           <div>
-            <lable> Comments </lable>
-              <input type="text"  onChange={(e)=> checkComment(e)}></input>
+            <lable > Comments </lable>
+              <input type="text" className='form-control' onChange={(e)=> checkComment(e)}></input>
           </div>
           <span className='text-danger'>{commenterror.error}</span>
 

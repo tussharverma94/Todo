@@ -46,7 +46,7 @@ const ShowTodo = (props) => {
               {/* </div> */}
             </div>
             <div className='col-sm-4'>
-              <div>
+              <>
                 {
                 //  showEditButton.value?
                 true ?
@@ -55,7 +55,7 @@ const ShowTodo = (props) => {
                 </div>
                 : <></>
                 }
-              </div>
+              </>
               <div >{(showEdit.id === item.id && showEdit.value) ? <Edit handlehideEdit={handlehideEdit} EditTask={props.EditTask} id={item.id}></Edit> : <></> }</div>
             </div>
             <div className='col-sm-4'>

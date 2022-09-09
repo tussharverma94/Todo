@@ -56,15 +56,15 @@ function AddTodo({addTask}) {
         <form onSubmit={event => {handleSubmit(event,addTask)} }>
           <div>
             <label> Heading </label>
-              <input type="text" onChange={e => checkHeading(e)}></input>
+              <input type="text"  className="form-control" onChange={e => checkHeading(e)}></input>
           </div>
           <span className='text-danger'>{headerror.error}</span>
 
           <br />
 
           <div>
-            <lable> Comments </lable>
-              <input type="text"  onChange={(e)=> checkComment(e)}></input>
+            <lable > Comments </lable>
+              <input type="text"  className="form-control"  onChange={(e)=> checkComment(e)}></input>
           </div>
           <span className='text-danger'>{commenterror.error}</span>
 

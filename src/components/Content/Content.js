@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import AddTodo from '../addTodo/addTodo';
 import Edit from '../Edit/Edit';
 import ShowTodo from '../showTodo/showTodo'
+import config from '../../../private';
 // import styles from './Content.module.css';
 
 const Content = () => {
@@ -26,9 +27,14 @@ const Content = () => {
   const [task, setTask] = useState([]);
 
   useEffect(() => {
-    console.log("use effect called");
-    axios.get('task.json')
-    .then(result => setTask(result.data))
+    // console.log("use effect called");
+    let url = config();
+    axios.get(url)
+    // axios.get('task.json')
+    .then(result => {
+      // console.log(result.data.data);
+      setTask(result.data.data)
+    })
   }, []);
 
   const EditTask = (val) => {
@@ -50,9 +56,12 @@ const Content = () => {
   const handleDelete = (id) => {
     return setTask(task => {return task.filter(e => e.id !== id)});
   }
+
   return (
   <div style={{margin:30}}>
+    {task.length <= 0 ? <div> Loading... </div> :
     <ShowTodo task={task} OnDelete={handleDelete} EditTask={EditTask}></ShowTodo>
+    }
     <AddTodo addTask={addTask}></AddTodo>
   </div>
 )};
